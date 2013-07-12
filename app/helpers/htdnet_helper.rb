@@ -1,0 +1,2 @@
+module HtdnetHelper
+end

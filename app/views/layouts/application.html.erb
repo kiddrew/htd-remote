@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTD Remote</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'bootstrap-tab.js' %>
+  <%= javascript_include_tag 'bootstrap-dropdown.js' %>
+  <%= javascript_include_tag 'bootstrap-button.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2" id="left-nav">
+      <button class="btn btn-primary">Zones</button><br/>
+      <button class="btn">Devices</button>
+    </div>
+    <div class="span10">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

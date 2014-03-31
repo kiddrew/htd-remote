@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>HTD Remote</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag 'bootstrap-tab.js' %>
@@ -11,16 +12,8 @@
 </head>
 <body>
 
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2" id="left-nav">
-      <button class="btn btn-primary">Zones</button><br/>
-      <button class="btn">Devices</button>
-    </div>
-    <div class="span10">
-      <%= yield %>
-    </div>
-  </div>
+<div class="wrap">
+  <%= yield %>
 </div>
 
 </body>

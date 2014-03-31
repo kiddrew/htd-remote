@@ -13,7 +13,7 @@ $(function() {
   })
 
   $(".volume-up").click( function() {
-    var zone_id = $(this).closest(".zone-panel").attr("data-id");
+    var zone_id = $(this).closest(".zone-panel-wrapper").attr("data-id");
     var current_volume = parseInt($(this).closest(".zone-panel").find(".zone-volume").html());
     if(current_volume >= 60) {
       return;
@@ -22,7 +22,7 @@ $(function() {
   })
 
   $(".volume-down").click( function() {
-    var zone_id = $(this).closest(".zone-panel").attr("data-id");
+    var zone_id = $(this).closest(".zone-panel-wrapper").attr("data-id");
     var current_volume = parseInt($(this).closest(".zone-panel").find(".zone-volume").html());
     if(current_volume <= 0) {
       return;
@@ -31,17 +31,17 @@ $(function() {
   })
 
   $(".enabled-true").click( function() {
-    var zone_id = $(this).closest(".zone-panel").attr("data-id");
+    var zone_id = $(this).closest(".zone-panel-wrapper").attr("data-id");
     enableZone(zone_id);
   })
 
   $(".enabled-false").click( function() {
-    var zone_id = $(this).closest(".zone-panel").attr("data-id");
+    var zone_id = $(this).closest(".zone-panel-wrapper").attr("data-id");
     disableZone(zone_id);
   })
 
   $(".mute").click( function() {
-    var zone_id = $(this).closest(".zone-panel").attr("data-id");
+    var zone_id = $(this).closest(".zone-panel-wrapper").attr("data-id");
     alert($("#zone-tab-"+zone_id+" .mute").val());
   })
 

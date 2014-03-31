@@ -38,6 +38,6 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "bootstrap-sass", ">= 2.2.2.0"
-gem 'font-awesome-sass-rails'
+gem 'font-awesome-rails'
 gem "simple_form", ">= 2.0.4"
 gem 'nokogiri'

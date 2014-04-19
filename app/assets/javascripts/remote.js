@@ -104,10 +104,13 @@ function setZoneEnabledDisplay(id, val) {
   if(val) {
     $("#zone-panel-"+id+" .enabled-true").addClass('active');
     $("#zone-panel-"+id+" .enabled-false").removeClass('active');
+    $("#zone-tab-"+id+" i").addClass('enabled');
   } else {
     $("#zone-panel-"+id+" .enabled-false").addClass('active');
     $("#zone-panel-"+id+" .enabled-true").removeClass('active');
+    $("#zone-tab-"+id+" i").removeClass('enabled');
   }
+
 }
 
 function setZoneMutedDisplay(id, val) {
@@ -122,7 +125,7 @@ function setZoneMutedDisplay(id, val) {
 function setZoneLabelsFromJson(json) {
   for(var i=0; i<6; i++) {
     var label = json[i]['label'];
-    $("#zone-tab-"+(i+1)).html(label);
+    $("#zone-tab-"+(i+1)+" span").html(label);
   }
 }
 
@@ -135,7 +138,7 @@ function setZoneStatus(id) {
       setZoneVolumeDisplay(id, data['keypad']['volume']);
       setZoneEnabledDisplay(id, data['keypad']['enabled']);
       setZoneMutedDisplay(id, data['keypad']['muted']);
-
+      
       setZoneLabelsFromJson(data['zones']);
     }
   })

@@ -14,6 +14,8 @@ body, html {
 
 body {
   background-color: #ddd !important;
+  color: #3498DB !important;
+  padding: 0 !important;
 }
 
 .wrap {
@@ -30,6 +32,7 @@ body {
   height: 10%;
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: 10%;
 }
 
 .zone-volume {
@@ -38,9 +41,8 @@ body {
   line-height: 3em;
   width: 100%;
   background: #fff;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
   font-size: 4em;
+  color: #3498DB;
 }
 
 .volume-control {
@@ -50,10 +52,26 @@ body {
   padding: 0;
 }
 
+.btn {
+  background-image: none !important;
+  background-color: #3498DB !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+
+.btn.active {
+  background-color: #fff !important;
+  color: #3498DB !important;
+}
+
 .volume-control .btn {
   width: 100%;
   line-height: 2em;
   font-size: 2em !important;
+}
+
+.volume-control .btn:hover {
+  color: #fff !important;
 }
 
 .volume-up {
@@ -83,6 +101,21 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 0;
+}
+
+.nav-tabs > .active > a {
+  background-color: #fcfcfc !important;
+}
+
+.nav-tabs > li > a > i {
+  color: #D23A2C;
+  font-size: 0.4em;
+  position: relative;
+  bottom: 0.3em;
+}
+
+.nav-tabs > li > a > i.enabled {
+  color: #5bb75b;
 }
 
 .nav-tabs > li > a:before {
@@ -120,3 +153,6 @@ body {
   width: 99%;
 }
 
+.tab-pane.active {
+  background-color: #fcfcfc !important;
+}
